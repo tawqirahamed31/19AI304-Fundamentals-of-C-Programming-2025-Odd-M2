@@ -56,7 +56,47 @@
 ### Step 11:
   Stop
 # Program:
+    #include <stdio.h>
+    
+    int main() {
+        float math, science, english, average;
+    
+        printf("Enter marks in Math: ");
+        scanf("%f", &math);
+    
+        printf("Enter marks in Science: ");
+        scanf("%f", &science);
+    
+        printf("Enter marks in English: ");
+        scanf("%f", &english);
+    
+        average = (math + science + english) / 3.0f;
+        printf("Average Marks = %.2f\n", average);
+    
+        if (average >= 90.0f)
+            printf("Grade: A");
+        else if (average >= 75.0f)
+            printf("Grade: B");
+        else if (average >= 50.0f)
+            printf("Grade: C");
+        else
+            printf("Grade: F");
+    
+        return 0;
+    }
+
 # Output:
+
+Enter marks in Math: 85
+
+Enter marks in Science: 90
+
+Enter marks in English: 80
+
+Average Marks = 85.00
+
+Grade: B
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +128,40 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+    #include <stdio.h>
+    
+    int main() {
+        int number = 15, i;
+    
+        for (i = 1; i <= 10; i++) {
+            printf("%d x %d = %d\n", number, i, number * i);
+        }
+    
+        return 0;
+    }
+
 # Output:
+
+15 x 1 = 15
+
+15 x 2 = 30
+
+15 x 3 = 45
+
+15 x 4 = 60
+
+15 x 5 = 75
+
+15 x 6 = 90
+
+15 x 7 = 105
+
+15 x 8 = 120
+
+15 x 9 = 135
+
+15 x 10 = 150
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +204,37 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+    #include <stdio.h>
+    
+    int main() {
+        int n, i = 2, flag = 0;
+    
+        printf("Enter a number: ");
+        scanf("%d", &n);
+    
+        while (i <= n - 1) {
+            if (n % i == 0) {
+                flag = 1;
+                break;
+            }
+            i++;
+        }
+    
+        if (flag == 0 && n > 1) {
+            printf("The number is Prime");
+        } else {
+            printf("The number is Not Prime");
+        }
+    
+        return 0;
+    }
+
 # Output:
+
+Enter a number: 7
+
+The number is Prime
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +282,28 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
-# Output:
+    #include <stdio.h>
+    
+    int main() {
+        int i, j, n = 5;
+    
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= n; j++) {
+                if (i == 1)
+                    printf("%d", j);
+                else if (i == n)
+                    printf("%d", n - j + 1);
+                else if (j == 1)
+                    printf("%d", i);
+                else if (j == n)
+                    printf("%d", n - i + 1);
+                else
+                    printf(" ");
+            }
+            printf("\n");
+        }
+        return 0;
+    }
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +356,30 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+
+# Program
+        #include <stdio.h>
+        
+        int main() {
+            int i, j;
+        
+            printf("0\n");
+        
+            for (i = 7; i >= 1; i--) {
+                for (j = i; j <= 7; j++) {
+                    printf("%d ", j);
+                }
+        
+                printf("0 ");
+        
+                for (j = 7; j >= i; j--) {
+                    printf("%d ", j);
+                }
+                printf("\n");
+            }
+        
+            return 0;
+        }
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
-
